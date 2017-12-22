@@ -13,9 +13,9 @@ public class GameMinesTest {
     // создаем группы по одной методом setGroup(x, y, groups)
     public void askGroups() {
 
-        ArrayList<GameMines.SolverMS.Group> groups = new ArrayList<>();
+        ArrayList<Group> groups = new ArrayList<>();
         GameMines gameMines = new GameMines(4, 4);
-        GameMines.SolverMS solverMS = new GameMines.SolverMS();
+        SolverMS solverMS = new SolverMS();
 
         gameMines.field[0][0].setIsOpen(false);
         gameMines.field[0][1].setIsOpen(true);
@@ -60,9 +60,9 @@ public class GameMinesTest {
     // создаем группы по одной и вычитаем методом subtraction(group)
     @Test
     public void askGroupsbySubtraction() {
-        ArrayList<GameMines.SolverMS.Group> groups = new ArrayList<>();
+        ArrayList<Group> groups = new ArrayList<>();
         GameMines gameMines = new GameMines(4, 4);
-        GameMines.SolverMS solverMS = new GameMines.SolverMS();
+        SolverMS solverMS = new SolverMS();
 
         gameMines.field[0][0].setIsOpen(false);
         gameMines.field[0][1].setIsOpen(true);
@@ -120,9 +120,9 @@ public class GameMinesTest {
     // создаем все группы и вычитаем общим методом setGroups(groups)
     @Test
     public void askGroupsbysetGroups() {
-        ArrayList<GameMines.SolverMS.Group> groups = new ArrayList<>();
+        ArrayList<Group> groups = new ArrayList<>();
         GameMines gameMines = new GameMines(4, 4);
-        GameMines.SolverMS solverMS = new GameMines.SolverMS();
+        SolverMS solverMS = new SolverMS();
 
         gameMines.field[0][0].setIsOpen(false);
         gameMines.field[0][1].setIsOpen(true);
@@ -160,9 +160,9 @@ public class GameMinesTest {
     }
     @Test
     public void changeVer() {
-        ArrayList<GameMines.SolverMS.Group> groups = new ArrayList<>();
+        ArrayList<Group> groups = new ArrayList<>();
         GameMines gameMines = new GameMines(4, 4);
-        GameMines.SolverMS solverMS = new GameMines.SolverMS();
+        SolverMS solverMS = new SolverMS();
 
         gameMines.field[0][0].setIsOpen(false);
         gameMines.field[0][1].setIsOpen(true);

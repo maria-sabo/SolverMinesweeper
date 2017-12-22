@@ -41,6 +41,7 @@ class GameMines extends JFrame { // сапер
         add(pNorth, BorderLayout.NORTH);
         SolverMS solverMS = new SolverMS();
         JFrame fcanvas1 = new JFrame(); // создание новой JFrame для Help
+
         fcanvas1.setTitle("Help");
 
         fcanvas1.setBounds(START_LOCATION + 400, START_LOCATION, FIELD_SIZE * BLOCK_SIZE + FIELD_DX, 100 + FIELD_SIZE * BLOCK_SIZE + FIELD_DY);
@@ -279,7 +280,7 @@ class GameMines extends JFrame { // сапер
                 for (int y = 0; y < FIELD_SIZE; y++) field[y][x].paint(g, x, y);
         }
     }
-
+    // решатель сапера
     public static class SolverMS extends JPanel {
         final int[] COLOR_OF_NUMBERS = {0x0000FF, 0x008000, 0xFF0000, 0x800000, 0x0, 0x0000FF, 0x008000, 0xFF0000};
         int FIELD_SIZE;
@@ -520,9 +521,8 @@ class GameMines extends JFrame { // сапер
             }
         }
 
-
         //          Создает список групп ячеек, связанных одним значением открытого поля, а
-//          также разбивает их на более мелкие, удаляет повторяющиеся
+       //          также разбивает их на более мелкие, удаляет повторяющиеся
         public void setGroups() {
             groups.clear();
             for (int x = 0; x < width; x++) for (int y = 0; y < height; y++) setGroup(x, y, groups); // создание групп
@@ -559,8 +559,6 @@ class GameMines extends JFrame { // сапер
             }
             while (repeat);
         }
-
     }
-
 }
 
